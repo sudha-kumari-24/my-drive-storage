@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drive Home</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link href="../home.css" rel="stylesheet" />
+  </head>
+
+  <body style="margin: 20px">
+    <!-- Show all files -->
+
+
+
+
+<h1>These are your uploaded files</h1>
+
+<div class="files mt-3 flex flex-col gap-2">
+<% files.forEach((file)=>{%>
+  <div class="p-2 border rounded">
+    <h1><%= file.originalName %></h1>
+    <p>ID: <%= file._id %></p>
+    <p>Path in DB: <%= file.path %></p>
+    
+    <div class="flex gap-2">
+      <!-- Open in browser (view) -->
+      <a href="/home/open/<%= file._id %>" 
+         class="text-green-500"
+         target="_blank">
+        <i class="open-line">Open in Browser</i>
+      </a>
+      
+      <!-- Download -->
+      <a href="/home/download/<%= file._id %>" 
+         class="text-blue-500">
+        <i class="download-line">Download</i>
+      </a>
+    </div>
+  </div>
+<% }) %>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 
+    <div class="files mt-3 flex flex-col gap-2">
+<% files.forEach((file)=>{%>
+  <div class="p-2">
+<h1>
+  <%=file.originalName%>
+</h1>
+<a href="/download/<%=file.path%>"
+
+  class="text-blue-500"
+  download="<%=file.originalName%>"
+  target="_blank"
+  >
+
+  <i class="download-line">Download</i>
+
+
+</a>
+  </div>
+  <%})%>
+    </div> -->
+
+   
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      /* @theme {
+        --color-clifford: #da373d;
+      } */
+    </style>
+
+
+<link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+<link href="../register.css" rel="stylesheet" />
+
+
+
+</head>
+<body class="m-30">
+    <h1 class="text-3xl font-bold underline text-clifford">
+      Register Now
+    </h1>
+
+
+<br>
+
+
+
+
+    
+<form action="register" method="post">
+    <div class="grid gap-6 mb-6 md:grid-cols-2 ">
+        <div>
+            <label for="username" class="block mb-2.5 text-sm font-medium text-heading">Name</label>
+            <input type="text" name="username" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="David" required />
+        </div>
+       
+      
+        <div>
+            <label for="phone" class="block mb-2.5 text-sm font-medium text-heading">Phone number</label>
+            <input type="tel" name="phone" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="12345-67890" " required /> 
+            <!-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3} -->
+        </div>
+       
+      
+    </div>
+    <div class="mb-6">
+        <label for="email" class="block mb-2.5 text-sm font-medium text-heading">Email address</label>
+        <input type="email" name="email" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="abc@gmail.com" required />
+    </div> 
+    <div class="mb-6">
+        <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Password</label>
+        <input type="password" name="password" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="•••••••••" required />
+    </div> 
+
+    <div class="mb-6">
+        <label for="confirm_password" class="block mb-2.5 text-sm font-medium text-heading">Confirm password</label>
+        <input type="password" name="confirm_password" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" placeholder="•••••••••" required />
+    </div> 
+
+
+    <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+        <input name="remember" type="checkbox" value="true" class="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" checked />
+        </div>
+        <label for="remember" class="ms-2 text-sm font-medium text-heading">I agree with the <a href="#" class="text-fg-brand hover:underline">terms and conditions</a>.</label>
+    </div>
+ <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<!-- include the following JavaScript file before the end of the body element: -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    
+</body>
+
+
+
+
+
+</html>
